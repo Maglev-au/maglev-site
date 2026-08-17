@@ -49,11 +49,11 @@ export default function Specs() {
     <section
       id="spec"
       ref={root}
-      className="relative border-y border-[var(--edge)] bg-[var(--ink-2)] py-36"
+      className="relative border-y border-[var(--edge)] bg-[var(--ink-2)] py-20 md:py-36"
     >
 
-      <div className="relative mx-auto grid max-w-[1440px] grid-cols-12 gap-16 px-8">
-        <div className="col-span-5">
+      <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-5 md:px-8 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-5">
           <div className="mono mb-5 flex items-center gap-4 text-[10px] tracking-[0.42em] text-[var(--cyan)]">
             <span className="inline-block h-px w-14 bg-[var(--cyan)]" />
             SPEC SHEET
@@ -75,18 +75,18 @@ export default function Specs() {
           </div>
         </div>
 
-        <div className="col-span-7">
+        <div className="lg:col-span-7">
           <div data-spec-table className="border-t border-[var(--edge)]">
             {SPECS.map(([k, v]) => (
               <div
                 key={k}
                 data-row
-                className="group flex items-baseline justify-between gap-8 border-b border-[var(--edge)] py-5 transition-colors duration-200 hover:bg-[var(--bone)]/[0.02]"
+                className="group flex flex-col gap-1 border-b border-[var(--edge)] py-4 transition-colors duration-200 hover:bg-[var(--bone)]/[0.02] md:flex-row md:items-baseline md:justify-between md:gap-8 md:py-5"
               >
-                <div className="mono w-[190px] shrink-0 text-[10px] tracking-[0.3em] text-[var(--pink)]">
+                <div className="mono shrink-0 text-[10px] tracking-[0.3em] text-[var(--pink)] md:w-[190px]">
                   {k}
                 </div>
-                <div className="flex-1 text-[19px] text-[var(--bone)]">{v}</div>
+                <div className="flex-1 text-[17px] text-[var(--bone)] md:text-[19px]">{v}</div>
                 <div className="mono text-[10px] tracking-[0.3em] text-[var(--bone)]/0 transition-colors duration-200 group-hover:text-[var(--cyan)]">
                   ·
                 </div>

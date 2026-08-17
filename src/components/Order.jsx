@@ -43,8 +43,8 @@ export default function Order() {
       />
       <div className="diag-grid-dense pointer-events-none absolute inset-0 opacity-50" />
 
-      <div className="relative mx-auto grid max-w-[1440px] grid-cols-12 items-center gap-10 px-8 pt-32 pb-24">
-        <div data-order-type className="col-span-6">
+      <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-5 pt-20 pb-16 md:px-8 lg:grid-cols-12 lg:pt-32 lg:pb-24">
+        <div data-order-type className="lg:col-span-6">
           <div className="mono mb-6 flex items-center gap-4 text-[10px] tracking-[0.42em] text-[var(--cyan)]">
             <span className="inline-block h-px w-14 bg-[var(--cyan)]" />
             DROP 001 · 500 UNITS · NO RESTOCK
@@ -91,7 +91,7 @@ export default function Order() {
           </div>
         </div>
 
-        <div data-order-cut className="col-span-6">
+        <div data-order-cut className="lg:col-span-6">
           <img
             src={MEDIA.cutout.src}
             alt="MAGLEV lamp, isolated"
@@ -102,8 +102,8 @@ export default function Order() {
       </div>
 
       <footer className="relative border-t border-[var(--edge)]">
-        <div className="mx-auto max-w-[1440px] px-8 py-12">
-          <div className="flex items-end justify-between gap-10">
+        <div className="mx-auto max-w-[1440px] px-5 py-10 md:px-8 md:py-12">
+          <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between md:gap-10">
             <img src={MEDIA.logo.src} alt="MAGLEV" className="h-7 w-auto" />
             <div className="mono flex gap-12 text-[10px] tracking-[0.28em] text-[var(--dim)]">
               <div>
@@ -119,7 +119,7 @@ export default function Order() {
 
           <div className="rule my-10" />
 
-          <div className="mono flex justify-between text-[10px] tracking-[0.28em] text-[var(--dim)]">
+          <div className="mono flex flex-col gap-2 text-[10px] tracking-[0.28em] text-[var(--dim)] sm:flex-row sm:justify-between">
             <span>© 2026 MAGLEV</span>
             <span>NOT LEGAL TENDER. OBVIOUSLY.</span>
           </div>

@@ -44,7 +44,7 @@ export default function Shop() {
 
   return (
     <section id="buy" ref={root} className="relative border-y border-[var(--edge)] bg-[var(--ink)]">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-14 px-8 py-24 lg:grid-cols-[minmax(0,1fr)_460px]">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[minmax(0,1fr)_460px] lg:gap-14">
         {/* ---------- gallery ---------- */}
         <div data-shop-reveal>
           <div className="relative aspect-[4/3] w-full overflow-hidden border border-[var(--edge)] bg-[#07060d]">

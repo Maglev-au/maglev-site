@@ -6,13 +6,13 @@ import { MEDIA } from '../data/media'
 gsap.registerPlugin(ScrollTrigger)
 
 const CARDS = [
-  { src: MEDIA.desk.src, kicker: 'ON THE DESK', title: 'IT OWNS THE ROOM AT 118MM.', span: 'col-span-7', ratio: 'aspect-16/9' },
-  { src: MEDIA.topdown.src, kicker: 'THE BAND', title: 'THREE STARS, ONE STRIPE.', span: 'col-span-5', ratio: 'aspect-square' },
-  { src: MEDIA.arc.src, kicker: 'THE GAP', title: 'CYAN, 6MM WIDE, ALWAYS ON.', span: 'col-span-5', ratio: 'aspect-16/9' },
-  { src: MEDIA.ring.src, kicker: 'THE CHAMFER', title: 'BRUSHED STEEL, NOT PAINT.', span: 'col-span-4', ratio: 'aspect-16/9' },
-  { src: MEDIA.unbox.src, kicker: 'IN THE BOX', title: 'FOUR CUTOUTS. NO FILLER.', span: 'col-span-3', ratio: 'aspect-4/5' },
-  { src: MEDIA.night.src, kicker: 'LIGHTS OUT', title: 'THE ONLY THING STILL ON.', span: 'col-span-8', ratio: 'aspect-16/9' },
-  { src: MEDIA.gap.src, kicker: 'UNDERSIDE', title: 'NOTHING GOES IN. NOTHING HOLDS IT.', span: 'col-span-4', ratio: 'aspect-4/5' },
+  { src: MEDIA.desk.src, kicker: 'ON THE DESK', title: 'IT OWNS THE ROOM AT 118MM.', span: 'md:col-span-7', ratio: 'aspect-16/9' },
+  { src: MEDIA.topdown.src, kicker: 'THE BAND', title: 'THREE STARS, ONE STRIPE.', span: 'md:col-span-5', ratio: 'aspect-square' },
+  { src: MEDIA.arc.src, kicker: 'THE GAP', title: 'CYAN, 6MM WIDE, ALWAYS ON.', span: 'md:col-span-5', ratio: 'aspect-16/9' },
+  { src: MEDIA.ring.src, kicker: 'THE CHAMFER', title: 'BRUSHED STEEL, NOT PAINT.', span: 'md:col-span-4', ratio: 'aspect-16/9' },
+  { src: MEDIA.unbox.src, kicker: 'IN THE BOX', title: 'FOUR CUTOUTS. NO FILLER.', span: 'md:col-span-3', ratio: 'aspect-4/5' },
+  { src: MEDIA.night.src, kicker: 'LIGHTS OUT', title: 'THE ONLY THING STILL ON.', span: 'md:col-span-8', ratio: 'aspect-16/9' },
+  { src: MEDIA.gap.src, kicker: 'UNDERSIDE', title: 'NOTHING GOES IN. NOTHING HOLDS IT.', span: 'md:col-span-4', ratio: 'aspect-4/5' },
 ]
 
 function TiltCard({ card }) {
@@ -84,9 +84,9 @@ export default function Gallery() {
   }, [])
 
   return (
-    <section id="detail" ref={root} className="relative bg-[var(--ink)] py-36">
-      <div className="mx-auto max-w-[1440px] px-8">
-        <div className="mb-16 flex items-end justify-between">
+    <section id="detail" ref={root} className="relative bg-[var(--ink)] py-20 md:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-8">
+        <div className="mb-10 flex flex-col items-start gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="mono mb-5 flex items-center gap-4 text-[10px] tracking-[0.42em] text-[var(--pink)]">
               <span className="inline-block h-px w-14 bg-[var(--pink)]" />
@@ -104,7 +104,9 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-5">
+        {/* one card per row on mobile; the 12-col mosaic only kicks in at md,
+            which is why the card spans are md:-prefixed */}
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
           {CARDS.map((c) => (
             <TiltCard key={c.src + c.kicker} card={c} />
           ))}

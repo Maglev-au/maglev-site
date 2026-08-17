@@ -51,10 +51,10 @@ export default function Figures() {
   return (
     <section ref={root} className="relative border-y border-[var(--edge)] bg-[var(--ink-2)]">
       <div className="diag-grid-dense pointer-events-none absolute inset-0 opacity-60" />
-      <div className="relative mx-auto grid max-w-[1440px] grid-cols-4 gap-px bg-[var(--edge)]">
+      <div className="relative mx-auto grid max-w-[1440px] grid-cols-2 gap-px bg-[var(--edge)] md:grid-cols-4">
         {FIGURES.map((f) => (
-          <div key={f.label} data-fig className="bg-[var(--ink-2)] px-8 py-14">
-            <div className="display flex items-baseline text-[clamp(46px,4.6vw,72px)] text-[var(--bone)]">
+          <div key={f.label} data-fig className="bg-[var(--ink-2)] px-5 py-9 md:px-8 md:py-14">
+            <div className="display flex items-baseline text-[clamp(34px,4.6vw,72px)] text-[var(--bone)]">
               <span data-num={f.value}>0</span>
               <span className="cyan-text ml-1">{f.suffix}</span>
             </div>

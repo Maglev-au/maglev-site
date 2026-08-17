@@ -67,13 +67,13 @@ export default function Hero() {
       <div className="scan pointer-events-none absolute inset-0 opacity-30" />
 
       {/* type */}
-      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-8 pb-16">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-12 md:px-8 md:pb-16">
         <div style={typeStyle}>
           <div
             data-h-eyebrow
-            className="mono mb-6 flex items-center gap-4 text-[10px] tracking-[0.42em] text-[var(--cyan)]"
+            className="mono mb-4 flex items-center gap-3 whitespace-nowrap text-[8px] tracking-[0.2em] text-[var(--cyan)] md:mb-6 md:gap-4 md:text-[10px] md:tracking-[0.42em]"
           >
-            <span className="inline-block h-px w-14 bg-[var(--cyan)]" />
+            <span className="inline-block h-px w-8 shrink-0 bg-[var(--cyan)] md:w-14" />
             DROP 001 · 500 UNITS · MIAMI
           </div>
 
@@ -84,7 +84,9 @@ export default function Hero() {
               is cut and the tight leading is unchanged. */}
           {/* flex column so the two wrappers' negative margins sum instead of
               collapsing to one — otherwise the padding above loosens the leading */}
-          <h1 className="display flex flex-col text-[clamp(52px,8.8vw,132px)]">
+          {/* 8.8vw floors at 30px, not 52px — "FLOATING MONEY LAMP" is 19
+              characters and overflowed a 375px screen at the old minimum */}
+          <h1 className="display flex flex-col text-[clamp(30px,8.8vw,132px)]">
             <div data-h-line className="-my-[0.18em] overflow-hidden py-[0.18em]">
               {/* the wordmark stands in for the first line — sized to the line
                   box so the leading matches the type below it */}
@@ -101,10 +103,10 @@ export default function Hero() {
             </div>
           </h1>
 
-          <div className="mt-10 flex items-end justify-between gap-16">
+          <div className="mt-7 flex flex-col items-start gap-7 md:mt-10 md:flex-row md:items-end md:justify-between md:gap-16">
             <p
               data-h-meta
-              className="max-w-[430px] text-[17px] leading-[1.45] text-[var(--dim)]"
+              className="max-w-[430px] text-[15px] leading-[1.45] text-[var(--dim)] md:text-[17px]"
             >
               <span className="block text-[var(--bone)]">
                 A 480-gram stack of MAGLEV cash, held 6mm off a matte-black base.
@@ -116,7 +118,7 @@ export default function Hero() {
               </span>
             </p>
 
-            <div data-h-cta className="flex items-center gap-3">
+            <div data-h-cta className="flex flex-wrap items-center gap-3">
               <a
                 href="#buy"
                 className="btn-neon mono border border-[var(--bone)]/30 bg-[var(--bone)]/[0.03] px-8 py-4 text-[11px] tracking-[0.3em] text-[var(--bone)]"
