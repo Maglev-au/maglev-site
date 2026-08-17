@@ -1,0 +1,10 @@
+{
+  // Static site deployed to Cloudflare Workers.
+  // `npm run build` produces ./dist; Workers serves it as static assets.
+  // There is no server-side code — checkout lives on Shopify.
+  "name": "maglev-site",
+  "compatibility_date": "2026-08-17",
+  "assets": {
+    "directory": "./dist"
+  }
+}
