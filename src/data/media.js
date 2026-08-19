@@ -15,6 +15,8 @@ export const MEDIA = {
   logo: { src: '/media/logo.png' },
   // the drop sequence, cropped to 4:3 for the gallery stage
   reveal: { src: '/media/reveal.mp4', poster: '/media/reveal-poster.jpg' },
+  // photograph of an actual unit, trimmed in around the product
+  unit: { src: '/media/unit.jpg' },
   // the real product capture, not a generation
   product: { src: '/media/product.mp4', poster: '/media/product-poster.jpg' },
 }
@@ -25,6 +27,7 @@ export const MEDIA = {
 export const GALLERY = [
   { id: 'reveal', type: 'video', src: MEDIA.reveal.src, poster: MEDIA.reveal.poster, alt: 'MAGLEV cash stack levitating against a neon skyline', label: 'THE DROP' },
   { id: 'clip', type: 'video', src: MEDIA.product.src, poster: MEDIA.product.poster, alt: 'MAGLEV lamp levitating on a desk', label: 'IN MOTION' },
+  { id: 'unit', type: 'image', src: MEDIA.unit.src, alt: 'The MAGLEV cash stack resting on its base', label: 'THE UNIT' },
   { id: 'desk', type: 'image', src: MEDIA.desk.src, alt: 'MAGLEV lamp on a gaming desk beside a monitor and keyboard', label: 'ON THE DESK' },
   { id: 'night', type: 'image', src: MEDIA.night.src, alt: 'The lamp glowing as the only light source in a dark room', label: 'NIGHT MODE' },
   { id: 'unbox', type: 'image', src: MEDIA.unbox.src, alt: 'The lamp packed in its foam-cut box', label: 'IN THE BOX' },
