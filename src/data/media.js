@@ -32,7 +32,7 @@ export const GALLERY = [
 export const PRODUCT = {
   name: 'MAGLEV — FLOATING CASH STACK',
   sku: 'MGLV-001',
-  price: 199.99,
+  price: 119.99,
   currency: 'AUD',
   currencySymbol: 'A$',
   inStock: 500,
