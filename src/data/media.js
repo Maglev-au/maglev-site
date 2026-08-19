@@ -13,7 +13,9 @@ export const MEDIA = {
   cutout: { src: '/media/product-cutout.png', job: '23051f8b-fe9d-43c0-aa1a-5c5ec8f55e8e' },
   exploded: { src: '/media/exploded.png', job: '986925b1-fc8d-4de0-a817-56c56df82be2' },
   logo: { src: '/media/logo.png' },
-  // the real product capture, not a generation — this is the shop's lead media
+  // the drop sequence, cropped to 4:3 for the gallery stage
+  reveal: { src: '/media/reveal.mp4', poster: '/media/reveal-poster.jpg' },
+  // the real product capture, not a generation
   product: { src: '/media/product.mp4', poster: '/media/product-poster.jpg' },
 }
 
@@ -21,6 +23,7 @@ export const MEDIA = {
 // generated stills. `fit` differs because the capture is vertical 9:16 and the
 // stills are landscape — contain keeps every one uncropped on a shared stage.
 export const GALLERY = [
+  { id: 'reveal', type: 'video', src: MEDIA.reveal.src, poster: MEDIA.reveal.poster, alt: 'MAGLEV cash stack levitating against a neon skyline', label: 'THE DROP' },
   { id: 'clip', type: 'video', src: MEDIA.product.src, poster: MEDIA.product.poster, alt: 'MAGLEV lamp levitating on a desk', label: 'IN MOTION' },
   { id: 'desk', type: 'image', src: MEDIA.desk.src, alt: 'MAGLEV lamp on a gaming desk beside a monitor and keyboard', label: 'ON THE DESK' },
   { id: 'night', type: 'image', src: MEDIA.night.src, alt: 'The lamp glowing as the only light source in a dark room', label: 'NIGHT MODE' },
