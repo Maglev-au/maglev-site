@@ -74,11 +74,11 @@ export default function Order() {
                 href={checkoutUrl(1)}
                 className="btn-neon mono border border-[var(--pink)] px-12 py-5 text-[12px] tracking-[0.3em] text-[var(--bone)]"
               >
-                ADD TO CART
+                BUY NOW
               </a>
             ) : (
               <button className="btn-neon mono border border-[var(--pink)] px-12 py-5 text-[12px] tracking-[0.3em] text-[var(--bone)]">
-                ADD TO CART
+                BUY NOW
               </button>
             )}
             <button className="mono border border-[var(--edge)] px-9 py-5 text-[12px] tracking-[0.3em] text-[var(--dim)] transition-colors duration-200 hover:border-[var(--cyan)] hover:text-[var(--cyan)]">
