@@ -5,7 +5,6 @@ export const MEDIA = {
   // the hero still — supplied, not generated
   heroStill: { src: '/media/hero-still.jpg' },
   gap: { src: '/media/gap.jpg', job: '5f1ec189-f3ab-4283-a3e0-14b365f55ce9' },
-  topdown: { src: '/media/topdown.jpg', job: 'cd16ca1b-2e27-49c3-bf78-17eda7e1201e' },
   desk: { src: '/media/desk.jpg', job: '313c0a7a-1a64-4051-a96c-6d41711fd764' },
   night: { src: '/media/night.jpg', job: 'c607874e-1a12-407a-a76a-43b709105d2e' },
   unbox: { src: '/media/unbox.jpg', job: 'b0fb081f-b5b5-4576-a89d-cc84b12e80b5' },
@@ -24,7 +23,6 @@ export const MEDIA = {
 export const GALLERY = [
   { id: 'clip', type: 'video', src: MEDIA.product.src, poster: MEDIA.product.poster, alt: 'MAGLEV lamp levitating on a desk', label: 'IN MOTION' },
   { id: 'desk', type: 'image', src: MEDIA.desk.src, alt: 'MAGLEV lamp on a gaming desk beside a monitor and keyboard', label: 'ON THE DESK' },
-  { id: 'topdown', type: 'image', src: MEDIA.topdown.src, alt: 'Top-down view of the banded cash stack over the glowing base', label: 'TOP-DOWN' },
   { id: 'night', type: 'image', src: MEDIA.night.src, alt: 'The lamp glowing as the only light source in a dark room', label: 'NIGHT MODE' },
   { id: 'unbox', type: 'image', src: MEDIA.unbox.src, alt: 'The lamp packed in its foam-cut box', label: 'IN THE BOX' },
 ]

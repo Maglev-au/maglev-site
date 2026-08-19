@@ -6,13 +6,13 @@ import { MEDIA } from '../data/media'
 gsap.registerPlugin(ScrollTrigger)
 
 const CARDS = [
+  // spans are rebalanced so each row still fills the 12-col grid: 7+5, 8+4, 6+6
   { src: MEDIA.desk.src, kicker: 'ON THE DESK', title: 'IT OWNS THE ROOM AT 118MM.', span: 'md:col-span-7', ratio: 'aspect-16/9' },
-  { src: MEDIA.topdown.src, kicker: 'THE BAND', title: 'THREE STARS, ONE STRIPE.', span: 'md:col-span-5', ratio: 'aspect-square' },
   { src: MEDIA.arc.src, kicker: 'THE GAP', title: 'CYAN, 6MM WIDE, ALWAYS ON.', span: 'md:col-span-5', ratio: 'aspect-16/9' },
-  { src: MEDIA.ring.src, kicker: 'THE CHAMFER', title: 'BRUSHED STEEL, NOT PAINT.', span: 'md:col-span-4', ratio: 'aspect-16/9' },
-  { src: MEDIA.unbox.src, kicker: 'IN THE BOX', title: 'FOUR CUTOUTS. NO FILLER.', span: 'md:col-span-3', ratio: 'aspect-4/5' },
   { src: MEDIA.night.src, kicker: 'LIGHTS OUT', title: 'THE ONLY THING STILL ON.', span: 'md:col-span-8', ratio: 'aspect-16/9' },
-  { src: MEDIA.gap.src, kicker: 'UNDERSIDE', title: 'NOTHING GOES IN. NOTHING HOLDS IT.', span: 'md:col-span-4', ratio: 'aspect-4/5' },
+  { src: MEDIA.ring.src, kicker: 'THE CHAMFER', title: 'BRUSHED STEEL, NOT PAINT.', span: 'md:col-span-4', ratio: 'aspect-16/9' },
+  { src: MEDIA.unbox.src, kicker: 'IN THE BOX', title: 'FOUR CUTOUTS. NO FILLER.', span: 'md:col-span-6', ratio: 'aspect-4/5' },
+  { src: MEDIA.gap.src, kicker: 'UNDERSIDE', title: 'NOTHING GOES IN. NOTHING HOLDS IT.', span: 'md:col-span-6', ratio: 'aspect-4/5' },
 ]
 
 function TiltCard({ card }) {
