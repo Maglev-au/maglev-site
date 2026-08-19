@@ -1,4 +1,11 @@
-// FAQ and policy copy. Kept as data so the section stays a dumb renderer.
+// FAQ, policy and contact copy. Kept as data so the section stays a dumb renderer.
+
+export const CONTACT = {
+  // NOTE: this mailbox must exist on the domain's Microsoft 365 tenant, or
+  // enquiries and the NOTIFY ME link bounce silently.
+  email: 'hello@maglev.com.au',
+  location: 'AUSTRALIA',
+}
 
 export const FAQS = [
   {

@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MEDIA, PRODUCT } from '../data/media'
 import { checkoutUrl, shopifyReady } from '../data/shopify'
+import { CONTACT } from '../data/policies'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -81,9 +82,12 @@ export default function Order() {
                 BUY NOW
               </button>
             )}
-            <button className="mono border border-[var(--edge)] px-9 py-5 text-[12px] tracking-[0.3em] text-[var(--dim)] transition-colors duration-200 hover:border-[var(--cyan)] hover:text-[var(--cyan)]">
+            <a
+              href={`mailto:${CONTACT.email}?subject=${encodeURIComponent('MAGLEV Drop 001 — notify me')}`}
+              className="mono border border-[var(--edge)] px-9 py-5 text-[12px] tracking-[0.3em] text-[var(--dim)] transition-colors duration-200 hover:border-[var(--cyan)] hover:text-[var(--cyan)]"
+            >
               NOTIFY ME
-            </button>
+            </a>
           </div>
 
           <div className="mono mt-8 text-[11px] tracking-[0.24em] text-[var(--dim)]">
@@ -109,9 +113,14 @@ export default function Order() {
               <div>
                 <div className="mb-3 text-[var(--bone)]">CONTACT</div>
                 <div className="leading-relaxed">
-                  HELLO@MAGLEV.STUDIO
+                  <a
+                    href={`mailto:${CONTACT.email}`}
+                    className="transition-colors duration-200 hover:text-[var(--cyan)]"
+                  >
+                    {CONTACT.email.toUpperCase()}
+                  </a>
                   <br />
-                  MIAMI, FL
+                  {CONTACT.location}
                 </div>
               </div>
             </div>
