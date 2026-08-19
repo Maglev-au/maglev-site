@@ -41,8 +41,8 @@ export default function App() {
         <Hero />
         <Shop />
         <Figures />
-        <Gallery />
         <Specs />
+        <Gallery />
         <Faq />
         <Order />
       </main>

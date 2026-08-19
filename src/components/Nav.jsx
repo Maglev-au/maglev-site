@@ -17,8 +17,8 @@ export default function Nav() {
         {/* anchors are the first thing to go on a narrow bar — the buy CTA matters more */}
         <nav className="mono hidden items-center gap-9 text-[10px] tracking-[0.28em] text-[var(--dim)] md:flex">
           {[
-            ['DETAIL', '#detail'],
             ['SPEC', '#spec'],
+            ['DETAIL', '#detail'],
             ['FAQ', '#faq'],
           ].map(([label, href]) => (
             <a
