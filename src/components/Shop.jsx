@@ -57,18 +57,13 @@ export default function Shop() {
               }}
             />
 
-            {/* The capture is vertical and the stills are landscape, so they get
-                different fits: a centre crop of the clip frames the lamp cleanly
-                for its whole run, while cropping the stills would cut the lamp
-                out of shots composed around it. */}
+            {/* The clip is pre-cropped to 4:3 so it fills the stage exactly with
+                no CSS cropping. The stills keep object-contain, since cropping
+                them would cut the lamp out of shots composed around it. */}
             {item.type === 'video' ? (
               <video
                 key={item.id}
                 className="relative h-full w-full object-cover"
-                // 38% rather than centred: the lamp sits high in the vertical
-                // frame, so a centre crop cuts the top of the stack when it
-                // tilts up (~3.5s) while keeping empty desk below the base
-                style={{ objectPosition: '50% 38%' }}
                 src={item.src}
                 poster={item.poster}
                 autoPlay
