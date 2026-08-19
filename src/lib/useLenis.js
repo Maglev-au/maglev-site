@@ -9,8 +9,10 @@ gsap.registerPlugin(ScrollTrigger)
  * Smooth scroll driven off GSAP's ticker so ScrollTrigger and Lenis never
  * disagree about where the page is.
  */
-export function useLenis() {
+export function useLenis(enabled = true) {
   useEffect(() => {
+    if (!enabled) return
+
     const lenis = new Lenis({
       duration: 1.05,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -31,5 +33,5 @@ export function useLenis() {
       gsap.ticker.remove(raf)
       lenis.destroy()
     }
-  }, [])
+  }, [enabled])
 }
