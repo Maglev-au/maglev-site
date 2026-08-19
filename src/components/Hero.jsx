@@ -22,7 +22,7 @@ export default function Hero() {
         .from('[data-h-cta] > *', { opacity: 0, y: 14, duration: 0.45, stagger: 0.07 }, 0.6)
 
       gsap.to('[data-h-plate]', {
-        yPercent: 13,
+        yPercent: 7,
         ease: 'none',
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
       })
@@ -32,8 +32,10 @@ export default function Hero() {
   }, [])
 
   // pointer parallax — type and footage move against each other
+  // overscan only as much as the pointer nudge needs — every extra percent
+  // of scale is image cropped off the sides
   const plateStyle = {
-    transform: `translate3d(${pointer.x * -18}px, ${pointer.y * -12}px, 0) scale(1.06)`,
+    transform: `translate3d(${pointer.x * -8}px, ${pointer.y * -5}px, 0) scale(1.02)`,
   }
   const typeStyle = {
     transform: `translate3d(${pointer.x * 10}px, ${pointer.y * 7}px, 0)`,
@@ -43,7 +45,7 @@ export default function Hero() {
     <section
       id="top"
       ref={root}
-      className="grain relative h-screen min-h-[760px] w-full overflow-hidden"
+      className="grain relative h-screen min-h-[680px] w-full overflow-hidden"
     >
       {/* the hero still, full-bleed behind the type */}
       <div className="absolute inset-0 overflow-hidden">
@@ -62,7 +64,7 @@ export default function Hero() {
       <div className="scan pointer-events-none absolute inset-0 opacity-30" />
 
       {/* type */}
-      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-12 md:px-8 md:pb-16">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-7 md:px-8 md:pb-8">
         <div style={typeStyle}>
           <div
             data-h-eyebrow
@@ -121,9 +123,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mono absolute bottom-6 right-8 z-10 text-[10px] tracking-[0.3em] text-[var(--dim)]">
-        SCROLL
-      </div>
     </section>
   )
 }
