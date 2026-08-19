@@ -2,9 +2,8 @@
 // Higgsfield job ids kept alongside so the source generation is traceable.
 
 export const MEDIA = {
-  // the hero film — supplied, not generated. Poster is its own frame 0 so
-  // there is no jump when playback starts.
-  heroVideo: { src: '/media/hero-video.mp4', poster: '/media/hero-video-poster.jpg' },
+  // the hero still — supplied, not generated
+  heroStill: { src: '/media/hero-still.jpg' },
   gap: { src: '/media/gap.jpg', job: '5f1ec189-f3ab-4283-a3e0-14b365f55ce9' },
   topdown: { src: '/media/topdown.jpg', job: 'cd16ca1b-2e27-49c3-bf78-17eda7e1201e' },
   desk: { src: '/media/desk.jpg', job: '313c0a7a-1a64-4051-a96c-6d41711fd764' },
@@ -31,9 +30,9 @@ export const GALLERY = [
 ]
 
 export const PRODUCT = {
-  name: 'MAGLEV — FLOATING MONEY LAMP',
+  name: 'MAGLEV — FLOATING CASH STACK',
   sku: 'MGLV-001',
-  price: 125,
+  price: 199.99,
   currency: 'AUD',
   currencySymbol: 'A$',
   inStock: 500,

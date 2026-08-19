@@ -138,11 +138,11 @@ export default function Shop() {
             className="mono mb-5 flex items-center gap-3 text-[10px] tracking-[0.42em] text-[var(--cyan)]"
           >
             <span className="inline-block h-px w-10 bg-[var(--cyan)]" />
-            IN STOCK
+            ONLY 500 AVAILABLE
           </div>
 
           <h2 data-shop-reveal className="display mb-4 text-[clamp(34px,3.4vw,54px)] text-[var(--bone)]">
-            FLOATING MONEY LAMP
+            FLOATING CASH STACK
           </h2>
 
           <div data-shop-reveal className="mb-7 flex items-baseline gap-3">

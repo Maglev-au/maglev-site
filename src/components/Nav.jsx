@@ -19,6 +19,7 @@ export default function Nav() {
           {[
             ['DETAIL', '#detail'],
             ['SPEC', '#spec'],
+            ['FAQ', '#faq'],
           ].map(([label, href]) => (
             <a
               key={href}

@@ -45,19 +45,14 @@ export default function Hero() {
       ref={root}
       className="grain relative h-screen min-h-[760px] w-full overflow-hidden"
     >
-      {/* the reveal cut, running full-bleed behind the type */}
+      {/* the hero still, full-bleed behind the type */}
       <div className="absolute inset-0 overflow-hidden">
-        <video
+        <img
           data-h-plate
           className="h-full w-full object-cover"
           style={plateStyle}
-          src={MEDIA.heroVideo.src}
-          poster={MEDIA.heroVideo.poster}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+          src={MEDIA.heroStill.src}
+          alt="MAGLEV floating cash stack on a neon-lit gaming desk"
         />
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05040a] via-[#05040a]/10 to-[#05040a]/45" />
@@ -74,7 +69,7 @@ export default function Hero() {
             className="mono mb-4 flex items-center gap-3 whitespace-nowrap text-[8px] tracking-[0.2em] text-[var(--cyan)] md:mb-6 md:gap-4 md:text-[10px] md:tracking-[0.42em]"
           >
             <span className="inline-block h-px w-8 shrink-0 bg-[var(--cyan)] md:w-14" />
-            DROP 001 · 500 UNITS · MIAMI
+            DROP 001 · ONLY 500 AVAILABLE
           </div>
 
           {/* The display face sits at line-height 0.82em, so its glyph box is
@@ -99,7 +94,7 @@ export default function Hero() {
               </span>
             </div>
             <div data-h-line className="-my-[0.18em] overflow-hidden py-[0.18em]">
-              <span className="neon-text block">FLOATING MONEY LAMP</span>
+              <span className="neon-text block">FLOATING CASH STACK</span>
             </div>
           </h1>
 

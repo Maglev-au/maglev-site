@@ -47,7 +47,7 @@ export default function Order() {
         <div data-order-type className="lg:col-span-6">
           <div className="mono mb-6 flex items-center gap-4 text-[10px] tracking-[0.42em] text-[var(--cyan)]">
             <span className="inline-block h-px w-14 bg-[var(--cyan)]" />
-            DROP 001 · 500 UNITS · NO RESTOCK
+            DROP 001 · ONLY 500 AVAILABLE · NO RESTOCK
           </div>
 
           <h2 className="display text-[clamp(52px,7.4vw,116px)] text-[var(--bone)]">
@@ -87,7 +87,7 @@ export default function Order() {
           </div>
 
           <div className="mono mt-8 text-[11px] tracking-[0.24em] text-[var(--dim)]">
-            412 OF 500 REMAINING
+            ONLY 500 AVAILABLE
           </div>
         </div>
 

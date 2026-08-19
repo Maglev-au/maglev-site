@@ -9,6 +9,7 @@ import Shop from './components/Shop'
 import Figures from './components/Figures'
 import Gallery from './components/Gallery'
 import Specs from './components/Specs'
+import Faq from './components/Faq'
 import Order from './components/Order'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -42,6 +43,7 @@ export default function App() {
         <Figures />
         <Gallery />
         <Specs />
+        <Faq />
         <Order />
       </main>
     </>
