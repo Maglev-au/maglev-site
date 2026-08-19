@@ -83,17 +83,6 @@ export default function Hero() {
               characters and overflowed a 375px screen at the old minimum */}
           <h1 className="display flex flex-col text-[clamp(30px,8.8vw,132px)]">
             <div data-h-line className="-my-[0.18em] overflow-hidden py-[0.18em]">
-              {/* the wordmark stands in for the first line — sized to the line
-                  box so the leading matches the type below it */}
-              <span className="block">
-                <img
-                  src={MEDIA.logo.src}
-                  alt="MAGLEV"
-                  className="block h-[0.82em] w-auto"
-                />
-              </span>
-            </div>
-            <div data-h-line className="-my-[0.18em] overflow-hidden py-[0.18em]">
               <span className="neon-text block">FLOATING CASH STACK</span>
             </div>
           </h1>
